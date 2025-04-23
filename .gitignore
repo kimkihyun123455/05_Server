@@ -6,6 +6,7 @@ driver.xml
 Servers
 
 ### Eclipse ###
+.classpath
 .metadata
 bin/
 tmp/

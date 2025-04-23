@@ -32,14 +32,25 @@ completeBtn.addEventListener("click",()=>{
 });
 
 // 삭제 버튼
-const deleteBtn = document.querySelector("#deleteBtn")
+const deleteBtn = document.querySelector("#deleteBtn");
 deleteBtn.addEventListener("click", ()=>{
+
+  // 정말 삭제할 것인지 confirm()을 이용해 확인
+  // confirm()은 확인(true) 취소(false)가 존재
+  if(!confirm("정말 삭제하시겠습니까?")) return;
+
+
 
   location.href="/todo/delete?todoNo="+todoNo;
 
 });
 
 // 수정 버튼
+const updateBtn = document.querySelector("#updateBtn");
 
+updateBtn.addEventListener("click", ()=>{
+  // 수정할 수 있는 화면 요청
 
+  location.href="/todo/update?todoNo="+todoNo;
+});
 

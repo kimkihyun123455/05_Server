@@ -103,4 +103,20 @@ public class TodoListServiceImpl implements TodoListService{
 		return result;
 	}
 
+
+	@Override
+	public int todoUpdate(int todoNo, String title, String detail) throws Exception {
+
+		Connection conn = JDBCTemplate.getConnection();
+		
+		int result = dao.todoUpdate(conn, todoNo, title, detail);
+		
+		if(result > 0) JDBCTemplate.commit(conn);
+		else JDBCTemplate.rollback(conn);
+		
+		JDBCTemplate.close(conn);
+		
+		return result;
+	}
+
 }

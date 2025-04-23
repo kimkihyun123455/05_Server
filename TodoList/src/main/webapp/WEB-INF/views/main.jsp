@@ -12,6 +12,21 @@
 	<link rel="stylesheet" href="/resources/css/main.css">
 </head>
 <body>
+
+	<form action="/login" method="post">
+		<c:if test="${empty session.loginMember}">
+		아이디 : <input type = "text" name="userId"> <br>
+	    비밀번호 : <input type = "password" name="userPw"> <br>
+		<button>로그인</button>
+		</c:if>
+	
+		<c:if test="${not empty session.loginMember}">
+		<p> ${session.loginMember}님을 환영합니다</p>
+		</c:if>
+	</form>
+	
+	
+	<button type="button" id="logout">로그아웃</button>
 	
 	<h1>Todo List</h1>
 	

@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="/resources/css/detail.css">
 </head>
 <body>
+	<h1>${session.loginMember}님의 정보 수정</h1>
 
 	<h1>${todo.todoTitle}</h1>
 
